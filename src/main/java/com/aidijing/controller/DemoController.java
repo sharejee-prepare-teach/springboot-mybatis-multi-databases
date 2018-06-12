@@ -28,7 +28,7 @@ public class DemoController {
     private PayService   payService;
 
 
-    @GetMapping( "users-tx" )
+    @GetMapping("users-tx" )
     public ResponseEntity< User > saveUser () {
         return ResponseEntity.ok(
                 userService.save(

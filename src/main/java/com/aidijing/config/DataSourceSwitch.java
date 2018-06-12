@@ -34,7 +34,7 @@ public class DataSourceSwitch {
     private void setDataSourceKey ( JoinPoint joinPoint , final String defaultKey ) {
         final Method            method            = this.currentMethod( joinPoint );
         final DynamicDataSource dynamicDataSource = method.getAnnotation( DynamicDataSource.class );
-        if ( Objects.isNull( dynamicDataSource ) ) {
+        if (dynamicDataSource == null) {
             DynamicMultipleDataSource.setDataSourceKey( defaultKey );
             return;
         }

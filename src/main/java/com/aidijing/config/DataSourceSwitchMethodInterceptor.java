@@ -30,7 +30,7 @@ public class DataSourceSwitchMethodInterceptor implements MethodInterceptor {
      */
     private void setDataSourceKey ( final Method method , final String defaultKey ) {
         final DynamicDataSource dynamicDataSource = method.getAnnotation( DynamicDataSource.class );
-        if ( Objects.isNull( dynamicDataSource ) ) {
+        if ( dynamicDataSource == null ) {
             DynamicMultipleDataSource.setDataSourceKey( defaultKey );
             return;
         }

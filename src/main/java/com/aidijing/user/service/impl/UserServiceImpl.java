@@ -29,7 +29,7 @@ public class UserServiceImpl extends ServiceImpl< UserMapper, User > implements 
     @Override
     public User save ( User user ) {
         super.insert( user );
-        System.err.println( 0 / 0 );
+        System.err.println("Save");
         return user;
     }
 }
